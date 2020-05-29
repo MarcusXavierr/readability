@@ -20,6 +20,7 @@ void analysis()
     int counterWords = 0;
     int counterSentences = 0;
     int counterLetters = 0;
+    printf("Type or paste an excerpt from a book and it will show you which age group that book is recommended\n");
     string text = get_string("Text: ");
     lenght = strlen(text);
 
@@ -54,15 +55,15 @@ void analysis()
     index = round(0.0588 * L - 0.296 * S - 15.8);
     if (index < 1)
     {
-        printf("Before Grade 1\n");
+        printf(" Under 6 years\n");
     }
-    else if (index > 16)
+    else if (index > 12)
     {
-        printf("Grade 16+\n");
+        printf("Older than 18 years\n");
     }
     else
     {
-        printf("Grade %i\n", index);
+        printf("Age range: %i/%i years\n", index + 6,index + 7);
     }
 
 }
